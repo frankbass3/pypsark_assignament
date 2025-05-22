@@ -1,0 +1,25 @@
+service:
+  url: "https://api.hashify.net/hash/md4/hex?value="
+
+paths:
+  source_data_contract: "./data/contracts.csv"  # Correct path for contracts
+  source_data_claim: "./data/claims.csv"  # Correct path for claims
+  target_data: "./data/transactions.parquet"  # Target path
+
+schema:
+  contract_schema:
+    - SOURCE_SYSTEM
+    - CONTRACT_ID
+    - CONTRACT_TYPE
+    - INSURED_PERIOD_FROM
+    - INSURED_PERIOD_TO
+    - CREATION_DATE
+  claim_schema:
+    - SOURCE_SYSTEM
+    - CLAIM_ID
+    - CONTRACT_SOURCE_SYSTEM
+    - CONTRACT_ID
+    - CLAIM_TYPE
+    - DATE_OF_LOSS
+    - AMOUNT
+    - CREATION_DATE

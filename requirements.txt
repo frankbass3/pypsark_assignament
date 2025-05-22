@@ -1,0 +1,6 @@
+pyspark
+requests
+pytest
+flake8
+pylint
+pyyaml
